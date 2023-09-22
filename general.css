@@ -1,0 +1,63 @@
+/* General */
+body {
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}  
+
+/* Exclusivo Encabezado */
+header {
+    padding: 25px;
+    text-align: center;
+    background: #000000;
+    font-size: 30px;
+}
+header b{
+    color: red;
+}
+
+/* Exclusivo Nav Bar */
+nav {
+    background-color: #000000;
+    overflow: hidden;
+    text-align:center;
+}
+
+nav a {
+    color: white;
+    padding: 1px 30px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav a:hover {
+    background-color: #8d8d8d;
+    color: black;
+}
+
+nav a.activo {
+    background-color: white;
+    color: black;
+}
+
+/* Exclusivo Footer */
+footer {
+    background-color: #000000;
+    overflow: hidden;
+    text-align:center;
+}
+
+.icono-container a{
+    color: white;
+    text-decoration: none;
+    font-size: 55px;
+    padding: 20px;
+    text-align: center;
+}
+
+footer hr {
+    width:50%;
+    border: 0;
+    border-top: 4px double white;
+}
