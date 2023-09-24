@@ -41,6 +41,19 @@ nav a.activo {
     color: black;
 }
 
+.container {
+    width: 100%;
+}
+
+p,ul, li {
+    background-color: #000000;
+    overflow: hidden;
+    text-align:justify;
+    width: 100%;
+    margin:0 auto;
+
+}
+
 /* Exclusivo Footer */
 footer {
     background-color: #000000;
@@ -56,8 +69,40 @@ footer {
     text-align: center;
 }
 
+.creditos-sitio a{
+    font-size: 16px;
+    vertical-align: middle;
+}
+.creditos-sitio img {
+    max-width: 40px; 
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
 footer hr {
     width:50%;
     border: 0;
     border-top: 4px double white;
+}
+
+/* Estilo personalizado para los botones danger */
+.btn-danger {
+    background-color: red;
+    /* Puedes ajustar otros estilos según tus preferencias */
+    color: white; /* Texto en blanco para que sea legible sobre el fondo rojo */
+    border-color: red; /* Color del borde */
+}
+
+table {
+    margin: 0 auto; /* Centrar la tabla */
+    max-width: 80%; /* Ancho máximo del 80% en escritorio */
+    width: 100%;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    body {
+        max-width: 90%; /* Ancho completo en dispositivos móviles */
+        margin: 0 auto;
+    }
 }
