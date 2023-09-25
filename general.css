@@ -1,15 +1,13 @@
-/* General */
+/* General Body*/
 body {
     color: white;
     background-color: black;
     margin: 0;
-    padding: 0;
+    text-align: center;
 }  
 
 /* Exclusivo Encabezado */
 header {
-    padding: 25px;
-    text-align: center;
     background: #000000;
     font-size: 30px;
 }
@@ -18,12 +16,6 @@ header b{
 }
 
 /* Exclusivo Nav Bar */
-nav {
-    background-color: #000000;
-    overflow: hidden;
-    text-align:center;
-}
-
 nav a {
     color: white;
     padding: 1px 30px;
@@ -41,24 +33,10 @@ nav a.activo {
     color: black;
 }
 
-.container {
-    width: 100%;
-}
-
-p,ul, li {
-    background-color: #000000;
-    overflow: hidden;
-    text-align:justify;
-    width: 100%;
-    margin:0 auto;
-
-}
 
 /* Exclusivo Footer */
 footer {
-    background-color: #000000;
-    overflow: hidden;
-    text-align:center;
+    display: block;
 }
 
 .icono-container a{
@@ -66,15 +44,9 @@ footer {
     text-decoration: none;
     font-size: 55px;
     padding: 20px;
-    text-align: center;
 }
 
-.creditos-sitio a{
-    font-size: 16px;
-    vertical-align: middle;
-}
 .creditos-sitio img {
-    max-width: 40px; 
     margin-left: 5px;
     vertical-align: middle;
 }
@@ -82,27 +54,57 @@ footer {
 footer hr {
     width:50%;
     border: 0;
-    border-top: 4px double white;
+    border-top: 4px double;
 }
 
-/* Estilo personalizado para los botones danger */
-.btn-danger {
+/* Exclusivo formulario (reemplaza bootstrap)*/
+.form{
+    display: block;
+    width: 60%;
+    height: 35px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.area{
+    height: 90px;
+}
+
+.btn{
+    padding: 12px;
+    border-radius: 10px;
     background-color: red;
-    /* Puedes ajustar otros estilos según tus preferencias */
-    color: white; /* Texto en blanco para que sea legible sobre el fondo rojo */
-    border-color: red; /* Color del borde */
+    color: white;
+    border-color: red;
 }
 
-table {
-    margin: 0 auto; /* Centrar la tabla */
-    max-width: 80%; /* Ancho máximo del 80% en escritorio */
-    width: 100%;
+/*General*/
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container p{
+    background-color: #000000;
+    overflow: hidden;
+    width: 70%;
+    margin:0 auto;
+    text-align: justify;
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 767px) {
+@media (max-width: 361px) {
     body {
         max-width: 90%; /* Ancho completo en dispositivos móviles */
+        margin: 0;
+    }
+    header {
+        font-size: 25px;
         margin: 0 auto;
+    }
+    .container p{
+        overflow: hidden;
+        text-align:justify;
+        width: 100%;
+        margin:0 auto;
     }
 }
