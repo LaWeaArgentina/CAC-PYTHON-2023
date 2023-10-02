@@ -108,3 +108,25 @@ footer hr {
         margin:0 auto;
     }
 }
+.descripcion-producto{
+    display: grid;
+    grid-template: repeat(5, auto) / 1fr 3fr;
+    padding: 1%;
+    gap: 50px 10px;
+}
+.descripcion-producto >div{
+    padding: 1%;
+    margin-left: 10%;
+    margin-right: 5%;
+    text-align: justify;
+    margin-top: 0px;
+}
+.titulo{
+    display: flex;
+    width: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
