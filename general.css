@@ -128,3 +128,13 @@ ol{
     text-align: justify;
     margin-top: 0px;
 }
+
+a {
+    display: inline-block;
+    margin: 0 1rem;
+    animation: heartBeat;
+    /*referencia a la declaracion @keyframedeclaration*/
+    animation-duration: 2s;
+    /*duracion*/
+    
+}
