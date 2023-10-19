@@ -2,8 +2,9 @@
 body {
     color: white;
     background-color: black;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
+    width: 80%;
 }  
 
 /* Exclusivo Encabezado */
@@ -33,7 +34,6 @@ nav a.activo {
     color: black;
 }
 
-
 /* Exclusivo Footer */
 footer {
     display: block;
@@ -52,7 +52,7 @@ footer {
 }
 
 footer hr {
-    width:50%;
+    width:60%;
     border: 0;
     border-top: 4px double;
 }
@@ -60,7 +60,7 @@ footer hr {
 /* Exclusivo formulario (reemplaza bootstrap)*/
 .form{
     display: block;
-    width: 60%;
+    width: 70%;
     height: 35px;
     margin: 0 auto;
     border-radius: 10px;
@@ -78,17 +78,24 @@ footer hr {
 }
 
 /*General*/
-.container {
-    width: 80%;
-    margin: auto;
-}
 
 .container p{
     background-color: #000000;
-    overflow: hidden;
     width: 70%;
     margin:0 auto;
     text-align: justify;
+}
+
+table{
+    margin: auto;
+}
+
+table tr td{
+    padding: 20px 20px; 
+}
+
+ol{
+    list-style-type: none;
 }
 
 /* Estilos para dispositivos móviles */
@@ -121,12 +128,13 @@ footer hr {
     text-align: justify;
     margin-top: 0px;
 }
-.titulo{
-    display: flex;
-    width: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    flex-flow: row wrap;
-    justify-content: center;
 
+a {
+    display: inline-block;
+    margin: 0 1rem;
+    animation: heartBeat;
+    /*referencia a la declaracion @keyframedeclaration*/
+    animation-duration: 2s;
+    /*duracion*/
+    
 }
