@@ -22,6 +22,7 @@ nav a {
     padding: 1px 30px;
     text-decoration: none;
     font-size: 25px;
+    
 }
 
 nav a:hover {
@@ -30,7 +31,7 @@ nav a:hover {
 }
 
 nav a.activo {
-    background-color: white;
+    background-color:white;
     color: black;
 }
 
@@ -129,12 +130,15 @@ ol{
     margin-top: 0px;
 }
 
-a {
-    display: inline-block;
-    margin: 0 1rem;
-    animation: heartBeat;
-    /*referencia a la declaracion @keyframedeclaration*/
-    animation-duration: 2s;
-    /*duracion*/
-    
+.agranda:hover
+ {
+  background-size: 0 0.1em, 100% 0.3em;
+  font-size: 29px;
+  cursor: pointer;
+  -webkit-transition: backgron2d-size 350ms;
+  transition: backgron2d-size 220ms;
+  -moz-transition: backgron2d-size 220ms;
+  -ms-transition: backgron2d-size 220ms;
+  -o-transition: backgron2d-size 220ms;
+  color: red;
 }
