@@ -1,6 +1,7 @@
 /* General Body*/
 body {
     color: white;
+    font-family: 'Noto Serif', serif;
     background-color: black;
     margin: 0 auto;
     text-align: center;
@@ -17,6 +18,7 @@ header {
 
 .ar {
     color: red;
+    font-weight: bold;
 }
 /* Estilos para el botón de hamburguesa */
 .menu-toggle { /* Estilo para el menú hamburguesa en pantalla pequeña */
@@ -135,7 +137,6 @@ header {
         display: none; /* El menú desplegable también está oculto en pantallas pequeñas */
     }
 }
-
 /* Exclusivo Footer */
 footer {
     display: block;
@@ -172,7 +173,9 @@ footer hr {
 }
 
 .btn{
-    padding: 12px;
+    padding: 2vh;
+    margin: 2vh;
+    font-weight: bold;
     border-radius: 10px;
     background-color: red;
     color: white;
@@ -180,11 +183,20 @@ footer hr {
 }
 
 /*General*/
-
+h1 {
+    font-size: 60px;
+    padding: 1%;
+    margin: 1%;
+}
+h2 {
+    font-size: 45px;
+}
+h3 {
+    font-size: 25px;
+}
 .container {
     width: 100%; /* Ancho deseado */
     margin: 0 auto; /* Centrar horizontalmente */
-    text-align: justify; /* Justificar el texto dentro del contenedor */
     background-color: black; /* Color de fondo si es necesario */
 }
 
@@ -195,7 +207,13 @@ footer hr {
     text-align: justify; /* Justificar el texto dentro del contenedor */
     padding-top: 1vh;
 }
-
+.container.btn {
+    width: 40%; /* Asegura que todos los elementos de texto ocupen el 40% */
+    position: relative;
+    text-align: center; /* Centrado del texto dentro del boton del contenedor */
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
 .container li {
     list-style-type: none; /* Elimina los marcadores predeterminados de la lista */
     position: relative; /* Asegura que el contenido antes del ::before funcione */
@@ -275,11 +293,12 @@ ol {
 /* Testimonial Slider */
 .testimonial-slider {
     background-color: red;
+    opacity: .9;
     color: black;
     padding: 1vh; /* Ajusta el valor según el espacio que desees entre el contenido y el borde */
     font-weight: bold;
     font-style: italic;
-    margin-top: 3vh;
+    margin-top: 1%;
   }
   
 /* Estilo para el testimonio con comillas solo en el primer párrafo */
