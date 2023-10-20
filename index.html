@@ -33,37 +33,55 @@
 </head>
 
 <body>
+    <nav>
+        <a id="menu-icon" class="menu-icon">&#9776;</a> <!-- Icono de hamburguesa -->
+    <a class="activo" href="index.html">INICIO</a>
+    <a href="nosotros.html">QUIENES SOMOS</a>
+    <a href="producto.html">PORTFOLIO</a>
+    <a href="contacto.html">CONTACTO</a>
+</nav>
+
+<nav id="mobile-menu" class="mobile-menu">
+        <a href="index.html">INICIO</a>
+    <a href="nosotros.html">QUIENES SOMOS</a>
+    <a href="producto.html">PORTFOLIO</a>
+    <a href="contacto.html">CONTACTO</a>
+</nav>
     <header>
             <h1>Presupuest<b class="ar">AR</b></h1>
         <p>Gestión de presupuestos audiovisuales</p>
     </header>
 
-    <nav>
-            <a id="menu-icon" class="menu-icon">&#9776;</a> <!-- Icono de hamburguesa -->
-        <a class="activo" href="index.html">INICIO</a>
-        <a href="nosotros.html">QUIENES SOMOS</a>
-        <a href="producto.html">PORTFOLIO</a>
-        <a href="contacto.html">CONTACTO</a>
-    </nav>
-
-    <nav id="mobile-menu" class="mobile-menu">
-            <a href="index.html">INICIO</a>
-        <a href="nosotros.html">QUIENES SOMOS</a>
-        <a href="producto.html">PORTFOLIO</a>
-        <a href="contacto.html">CONTACTO</a>
-    </nav>
-
-    <br>
-    <img src="presupuestar-imageninicio.jpeg" alt="Imagen de PresupuestAR">
-    <h2>PresupuestAR - Sistema de Gestión de Presupuesto Audiovisual</h2>
+    <!-- Testimonial Slider Container -->
+    <div class="testimonial-slider">
+        <div class="testimonial">
+            <p id="testimonial-text">Cargando Testimonios...</p>
+            <p id="testimonial-author"></p>
+        </div>
+    </div>
+    <!-- Contenedor para el video de YouTube -->
+ 
+    <div class="video-container">
+        <!-- Imagen PNG -->
+        <img href="" class="overlay-image" src="play-presupuestAR.png" alt="logo PresupuestAR">
+        <iframe
+            class="centered-video"
+            width="600"
+            height="315"
+            src="https://www.youtube.com/embed/_NK8TPdY4_s?autoplay=1&controls=1&showinfo=0&autohide=&loop=1&mute=1"
+            title="PRESUPUESTAR RODAJE"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+    </div>
 
     <div class="container">
-            <p>PresupuestAR es la solución que tu equipo de producción audiovisual necesita para simplificar la gestión
+            <p>Presupuest<b class="ar">AR</b> es la solución que tu equipo de producción audiovisual necesita para simplificar la gestión
                     de presupuestos. Con nuestras herramientas avanzadas, podrás:
         </p>
 
         <ol>
-                    <li>Crear presupuestos detallados de forma eficiente.</li>
+            <li>Crear presupuestos detallados de forma eficiente.</li>
             <li>Llevar un seguimiento de los gastos en tiempo real.</li>
             <li>Planificar recursos humanos y materiales de manera efectiva.</li>
             <li>Generar calendarios de producción precisos.</li>
@@ -85,6 +103,10 @@
                 alt="Equipo 10 COM 23510"></a></p>
                     </div>
     </footer>
+    <!-- Include your JavaScript file for the testimonial slider -->
+    <script src="testimonials.js"></script>
+    <!-- Include your JavaScript file for the hamburguer menu -->
+    <script src="hamburguer.js"></script>
 </body>
 
 </html>
