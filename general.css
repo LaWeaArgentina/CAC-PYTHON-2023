@@ -18,32 +18,122 @@ header {
 .ar {
     color: red;
 }
-
-/* Exclusivo Nav Bar */
-
-nav {
-    margin-top: 1vh;
-    padding: 1vh;
-    
+/* Estilos para el botón de hamburguesa */
+.menu-toggle { /* Estilo para el menú hamburguesa en pantalla pequeña */
+    display: block;
+    cursor: pointer;
+    padding: 3%;
 }
 
-nav a {
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Estilos para el menú de navegación en pantalla grande */
+.nav {
+    padding: 2%;
+    cursor: pointer;
+}
+
+.nav a {
     color: white;
-    margin-top: 1vh;
-    padding: 1vh;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 25px;
-    
+    font-size: 16px;
 }
 
-nav a:hover {
+.nav a:hover {
     background-color: #8d8d8d;
     color: black;
 }
 
-nav a.activo {
-    background-color:white;
+.nav a.activo {
+    background-color: white;
     color: black;
+}
+
+/* Estilos para el menú desplegable en pantalla pequeña */
+.nav.show-menu {
+    display: none;
+    background-color: red; /* Fondo negro */
+    opacity: .9;
+    width: 50%; /* Ancho del 50% de la pantalla */
+    position: fixed; /* Fijar la posición para que esté siempre visible */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    height: 100%; /* Altura del 100% de la pantalla */
+    display: flex; /* Mostrar los elementos como una lista horizontal */
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    align-items: justify; /* Justificar verticalmente los elementos */
+    padding: 1%; /* Espacio interno para separar los elementos del borde */
+}
+/* Estilo para los elementos de lista sin viñetas en el menú desplegable en pantalla pequeña */
+.nav.show-menu ul li {
+    list-style: none; /* Elimina las viñetas */
+    text-align: justify; /* Justificar el texto dentro del contenedor */
+    padding: 1%; /* Elimina el espacio de relleno por defecto */
+}
+
+.nav.show-menu img {
+    size: 30%;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+}
+
+/* Agregar la cruz para cerrar el menú en pantalla pequeña */
+.nav.show-menu .close-button::before {
+    content: '\2716'; /* Código de carácter para la cruz (×) */
+    font-size: 30px; /* Tamaño de fuente */
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para los enlaces dentro del menú desplegable en pantalla pequeña */
+.nav.show-menu a {
+    color: white;
+    font-weight: bold;
+    padding: 3%;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Estilos para mostrar el menú desplegable cuando el botón de hamburguesa está activo en pantalla pequeña */
+.menu-toggle.active + .nav.show-menu {
+}
+
+/* Media query para pantallas de 800px o menos */
+@media (max-width: 800px) {
+    .menu-toggle {
+        display: block; /* El botón de hamburguesa es visible en pantallas pequeñas */
+    }
+
+    .nav {
+        display: none; /* El menú de navegación está oculto en pantallas pequeñas */
+    }
+
+    .nav.show-menu {
+        display: none; /* El menú desplegable también está oculto en pantallas pequeñas */
+    }
 }
 
 /* Exclusivo Footer */
@@ -144,7 +234,7 @@ ol {
         margin: 0;
     }
     header {
-        font-size: 25px;
+        font-size: 15px;
         margin: 0 auto;
     }
     .container p{
@@ -154,6 +244,7 @@ ol {
         margin:0 auto;
     }
 }
+
 .descripcion-producto{
     display: grid;
     grid-template: repeat(5, auto) / 1fr 3fr;
