@@ -84,6 +84,7 @@ header {
     flex-direction: column; /* Alinear los elementos verticalmente */
     align-items: justify; /* Justificar verticalmente los elementos */
     padding: 1%; /* Espacio interno para separar los elementos del borde */
+    z-index: 999;
 }
 /* Estilo para los elementos de lista sin viñetas en el menú desplegable en pantalla pequeña */
 .nav.show-menu ul li {
