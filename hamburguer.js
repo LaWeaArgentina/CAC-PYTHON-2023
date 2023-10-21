@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Agrega un evento de clic al botón de hamburguesa
     menuToggle.addEventListener("click", function () {
-        // Si la pantalla tiene una resolución menor o igual a 800px
-        if (window.innerWidth <= 800) {
+        // Si la pantalla tiene una resolución menor o igual a 840px
+        if (window.innerWidth <= 840) {
             // Muestra el menú desplegable
             navShowMenu.style.display = "block";
             // Oculta el botón de hamburguesa
@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButton.addEventListener("click", function () {
         // Oculta el menú desplegable
         navShowMenu.style.display = "none";
-        // Muestra el botón de hamburguesa si la resolución es menor o igual a 800px
-        if (window.innerWidth <= 800) {
+        // Muestra el botón de hamburguesa si la resolución es menor o igual a 840px
+        if (window.innerWidth <= 840) {
             menuToggle.style.display = "block";
         }
     });
 
     // Comprueba la resolución inicial y muestra u oculta elementos en consecuencia
-    if (window.innerWidth > 800) {
+    if (window.innerWidth > 840) {
         menuToggle.style.display = "none";
         navShowMenu.style.display = "none";
     } else {

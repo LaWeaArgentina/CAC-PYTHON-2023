@@ -1,3 +1,117 @@
+/* Estilos para dispositivos móviles */
+@media (max-width: 414px) {
+    body {
+        max-width: 100%; /* Ancho completo en dispositivos móviles */
+        margin: 0 auto;
+    }
+    header {
+        font-size: 12px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 30px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h2 {
+        font-size: 20px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h3 {
+        font-size: 16px;
+        padding: 1%;
+        margin: 1%;
+    }
+    .container p{
+        overflow: hidden;
+        text-align:justify;
+        width: 100%;
+        margin:0 auto;
+    }
+
+}
+/* Estilos para dispositivos móviles medianos (de 415px a 767px) */
+@media (min-width: 415px) and (max-width: 767px) {
+    body {
+        max-width: 100%; /* Ancho completo en dispositivos móviles */
+        margin: 0 auto;
+    }
+    header {
+        font-size: 16px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 40px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h2 {
+        font-size: 20px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h3 {
+        font-size: 18px;
+        padding: 1%;
+        margin: 1%;
+    }
+    .container p{
+        overflow: hidden;
+        text-align:justify;
+        width: 100%;
+        margin:0 auto;
+    }
+}
+
+/* Estilos para tabletas (de 768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        max-width: 100%; /* Ancho completo en dispositivos móviles */
+        margin: 0 auto;
+    }
+    header {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 60px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h2 {
+        font-size: 40px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h3 {
+        font-size: 30px;
+        padding: 1%;
+        margin: 1%;
+    }
+    .container p{
+        overflow: hidden;
+        text-align:justify;
+        width: 100%;
+        margin:0 auto;
+    }
+}
+
+/*Nav Bar para pantallas de 800px o menos */
+@media (max-width: 840px) {
+    .menu-toggle {
+        display: block; /* El botón de hamburguesa es visible en pantallas pequeñas */
+    }
+
+    .nav {
+        display: none; /* El menú de navegación está oculto en pantallas pequeñas */
+    }
+
+    .nav.show-menu {
+        display: none; /* El menú desplegable también está oculto en pantallas pequeñas */
+    }
+}
+
 /* General Body*/
 body {
     color: white;
@@ -6,7 +120,7 @@ body {
     margin: 0 auto;
     text-align: center;
     width: 80%;
-}  
+}
 
 /* Exclusivo Encabezado */
 header {
@@ -47,7 +161,7 @@ header {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Estilos para el menú de navegación en pantalla grande */
+/* Estilos para el menú de navegación en pantalla mas grandes de 840px */
 .nav {
     padding: 2%;
     cursor: pointer;
@@ -76,7 +190,7 @@ header {
     background-color: red; /* Fondo negro */
     opacity: .9;
     width: 50%; /* Ancho del 50% de la pantalla */
-    position: fixed; /* Fijar la posición para que esté siempre visible */
+    position: fixed; /* Fija la posición para que esté siempre visible */
     top: 0; /* Alinear en la parte superior */
     left: 0; /* Alinear a la izquierda */
     height: 100%; /* Altura del 100% de la pantalla */
@@ -91,6 +205,7 @@ header {
     list-style: none; /* Elimina las viñetas */
     text-align: justify; /* Justificar el texto dentro del contenedor */
     padding: 1%; /* Elimina el espacio de relleno por defecto */
+    margin-top: 0 auto;
 }
 
 .nav.show-menu img {
@@ -124,20 +239,6 @@ header {
 .menu-toggle.active + .nav.show-menu {
 }
 
-/* Media query para pantallas de 800px o menos */
-@media (max-width: 800px) {
-    .menu-toggle {
-        display: block; /* El botón de hamburguesa es visible en pantallas pequeñas */
-    }
-
-    .nav {
-        display: none; /* El menú de navegación está oculto en pantallas pequeñas */
-    }
-
-    .nav.show-menu {
-        display: none; /* El menú desplegable también está oculto en pantallas pequeñas */
-    }
-}
 /* Exclusivo Footer */
 footer {
     display: block;
@@ -184,17 +285,6 @@ footer hr {
 }
 
 /*General*/
-h1 {
-    font-size: 60px;
-    padding: 1%;
-    margin: 1%;
-}
-h2 {
-    font-size: 45px;
-}
-h3 {
-    font-size: 25px;
-}
 .container {
     width: 100%; /* Ancho deseado */
     margin: 0 auto; /* Centrar horizontalmente */
@@ -246,24 +336,6 @@ ol {
     padding-inline-start: 0px;
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 361px) {
-    body {
-        max-width: 90%; /* Ancho completo en dispositivos móviles */
-        margin: 0;
-    }
-    header {
-        font-size: 15px;
-        margin: 0 auto;
-    }
-    .container p{
-        overflow: hidden;
-        text-align:justify;
-        width: 100%;
-        margin:0 auto;
-    }
-}
-
 .descripcion-producto{
     display: grid;
     grid-template: repeat(5, auto) / 1fr 3fr;
@@ -291,44 +363,43 @@ ol {
   color: red;
 }
 
-/* Testimonial Slider */
+/* Testimonial Slider - Estilo */
 .testimonial-slider {
     background-color: red;
     opacity: .9;
     color: black;
-    padding: 1vh; /* Ajusta el valor según el espacio que desees entre el contenido y el borde */
+    padding: 1%;
     font-weight: bold;
     font-style: italic;
     margin-top: 1%;
-  }
-  
+    margin-bottom: 1%;
+}
+
 /* Estilo para el testimonio con comillas solo en el primer párrafo */
 .testimonial-slider p:first-child::before,
 .testimonial-slider p:first-child::after {
     content: '“'; /* Agrega la comilla de apertura al primer párrafo testimonio*/
 }
 
-.testimonial-slider p:first-child::after {
+ .testimonial-slider p:first-child::after {
     content: '”'; /* Agrega la comilla de cierre al primer párrafo testimonio*/
 }
 
 /* El estilo del video */
-
-.video-container {
+ .video-container {
     display: flex;
-    margin-top: 1vh;
-    padding: 1vh;
+    padding: 1%;
     justify-content: center;
     align-items: center;
 }
 
-.centered-video {
+ .centered-video {
     width: 100%;
     max-width: 900px; /* Ajusta el ancho máximo del video según tus necesidades */
     max-height: 100%; /* El video ocupará el 100% de la altura del contenedor */
 }
 
-.overlay-image {
+ .overlay-image {
     position: absolute;
     align-items: center;
     opacity: .4;
