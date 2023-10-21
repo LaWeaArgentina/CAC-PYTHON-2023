@@ -318,16 +318,32 @@ footer hr {
     padding-right: 2vw; /* Separación de 2vw entre el punto y el texto */
 }
 
-table{
+table tbody{
     margin: auto;
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+}
+
+/* Estilo para las imágenes de logos */
+table img {
+    max-width: 100%; /* Ajusta el ancho máximo de las imágenes al 100% */
+    height: auto; /* Permite que la altura de las imágenes se ajuste automáticamente */
+    display: block; /* Elimina cualquier espacio adicional alrededor de las imágenes */
+    margin: 0 auto; /* Centra las imágenes horizontalmente en sus celdas */
 }
 
 table tr td{
-    padding: 20px 20px; 
+    padding: 1%;
+    max-width: 100%;
+
 }
 
 ol {
     display: block;
+    max-width: 100%;
     list-style-type: none;
     margin-block-start: 0px;
     margin-block-end: 0px;
