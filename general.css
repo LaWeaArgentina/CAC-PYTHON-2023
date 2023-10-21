@@ -352,16 +352,20 @@ ol {
     padding-inline-start: 0px;
 }
 
-.descripcion-producto{
-    display: grid;
-    grid-template: repeat(5, auto) / 1fr 3fr;
-    padding: 1%;
-    gap: 50px 10px;
+.descripcion-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.descripcion-producto img {
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: auto;
+}
+
 .descripcion-producto >div{
+    max-width: 100%;
     padding: 1%;
-    margin-left: 10%;
-    margin-right: 5%;
     text-align: justify;
     margin-top: 0px;
 }
