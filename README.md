@@ -22,8 +22,9 @@ Documentación Preliminar del Proyecto - PresupuestAR
             - descripción de producto
             - invitación a conocernos en redes sociales
     • Clientes
-            - galería de logos de clientes que ya confiaron en nosotros.
+            - galería de logos de la gran cantidad de clientes que ya confiaron en nosotros.
     • Productos
+            - informacion detallada de cada una de las herramientas.
     • Contacto 
 
 4. Diseño y Estilo: 
