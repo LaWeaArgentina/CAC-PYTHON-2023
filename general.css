@@ -1,116 +1,4 @@
-/* Estilos para dispositivos móviles */
-@media (max-width: 414px) {
-    body {
-        max-width: 100%; /* Ancho completo en dispositivos móviles */
-        margin: 0 auto;
-    }
-    header {
-        font-size: 12px;
-        margin: 0 auto;
-    }
-    h1 {
-        font-size: 30px;
-        padding: 1%;
-        margin: 1%;
-    }
-    h2 {
-        font-size: 20px;
-        padding: 1%;
-        margin: 1%;
-    }
-    h3 {
-        font-size: 16px;
-        padding: 1%;
-        margin: 1%;
-    }
-    .container p{
-        overflow: hidden;
-        text-align:justify;
-        width: 100%;
-        margin:0 auto;
-    }
 
-}
-/* Estilos para dispositivos móviles medianos (de 415px a 767px) */
-@media (min-width: 415px) and (max-width: 767px) {
-    body {
-        max-width: 100%; /* Ancho completo en dispositivos móviles */
-        margin: 0 auto;
-    }
-    header {
-        font-size: 16px;
-        margin: 0 auto;
-    }
-    h1 {
-        font-size: 40px;
-        padding: 1%;
-        margin: 1%;
-    }
-    h2 {
-        font-size: 20px;
-        padding: 1%;
-        margin: 1%;
-    }
-    h3 {
-        font-size: 18px;
-        padding: 1%;
-        margin: 1%;
-    }
-    .container p{
-        overflow: hidden;
-        text-align:justify;
-        width: 100%;
-        margin:0 auto;
-    }
-}
-
-/* Estilos para tabletas (de 768px a 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    body {
-        max-width: 100%; /* Ancho completo en dispositivos móviles */
-        margin: 0 auto;
-    }
-    header {
-        font-size: 18px;
-        margin: 0 auto;
-    }
-    h1 {
-        font-size: 60px;
-        padding: 1%;
-        margin: 1%;
-    }
-    h2 {
-        font-size: 40px;
-        padding: 1%;
-        margin: 1%;
-    }
-    h3 {
-        font-size: 30px;
-        padding: 1%;
-        margin: 1%;
-    }
-    .container p{
-        overflow: hidden;
-        text-align:justify;
-        width: 100%;
-        margin:0 auto;
-    }
-}
-
-/*Nav Bar para pantallas de 800px o menos */
-@media (max-width: 840px) {
-    .menu-toggle {
-        display: block; /* El botón de hamburguesa es visible en pantallas pequeñas */
-    }
-
-    .nav {
-        display: none; /* El menú de navegación está oculto en pantallas pequeñas */
-    }
-
-    .nav.show-menu {
-        display: none; /* El menú desplegable también está oculto en pantallas pequeñas */
-    }
-}
 
 /* General Body*/
 body {
@@ -232,7 +120,8 @@ header {
     font-weight: bold;
     padding: 3%;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
+    text-shadow: 2px 2px 0 black;
 }
 
 /* Estilos para mostrar el menú desplegable cuando el botón de hamburguesa está activo en pantalla pequeña */
@@ -353,8 +242,7 @@ ol {
 }
 
 .descripcion-producto {
-    display: flex;
-    flex-direction: column;
+    display: block;
     align-items: center;
 }
 
@@ -364,10 +252,9 @@ ol {
 }
 
 .descripcion-producto >div{
-    max-width: 100%;
     padding: 1%;
     text-align: justify;
-    margin-top: 0px;
+    display: flex;
 }
 
 .agranda:hover
@@ -424,4 +311,127 @@ ol {
     align-items: center;
     opacity: .4;
     z-index: 2; /* Asegura que esté arriba de otros elementos */
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 414px) {
+    body {
+        max-width: 100%; /* Ancho completo en dispositivos móviles */
+        margin: 0 auto;
+    }
+    header {
+        font-size: 12px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 30px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h2 {
+        font-size: 20px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h3 {
+        font-size: 16px;
+        padding: 1%;
+        margin: 1%;
+    }
+    .container p{
+        overflow: hidden;
+        text-align:justify;
+        width: 100%;
+        margin:0 auto;
+    }
+    .descripcion-producto >div{
+        display: block;
+    }
+
+}
+/* Estilos para dispositivos móviles medianos (de 415px a 767px) */
+@media (min-width: 415px) and (max-width: 767px) {
+    body {
+        max-width: 100%; /* Ancho completo en dispositivos móviles */
+        margin: 0 auto;
+    }
+    header {
+        font-size: 16px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 40px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h2 {
+        font-size: 20px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h3 {
+        font-size: 18px;
+        padding: 1%;
+        margin: 1%;
+    }
+    .container p{
+        overflow: hidden;
+        text-align:justify;
+        width: 100%;
+        margin:0 auto;
+    }
+    .descripcion-producto >div{
+        display: block;
+    }
+    
+}
+
+/* Estilos para tabletas (de 768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        max-width: 100%; /* Ancho completo en dispositivos móviles */
+        margin: 0 auto;
+    }
+    header {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 60px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h2 {
+        font-size: 40px;
+        padding: 1%;
+        margin: 1%;
+    }
+    h3 {
+        font-size: 30px;
+        padding: 1%;
+        margin: 1%;
+    }
+    .container p{
+        overflow: hidden;
+        text-align:justify;
+        width: 100%;
+        margin:0 auto;
+    }
+    .descripcion-producto >div{
+        display: block;
+    }
+}
+
+/*Nav Bar para pantallas de 800px o menos */
+@media (max-width: 840px) {
+    .menu-toggle {
+        display: block; /* El botón de hamburguesa es visible en pantallas pequeñas */
+    }
+
+    .nav {
+        display: none; /* El menú de navegación está oculto en pantallas pequeñas */
+    }
+
+    .nav.show-menu {
+        display: none; /* El menú desplegable también está oculto en pantallas pequeñas */
+    }
 }
