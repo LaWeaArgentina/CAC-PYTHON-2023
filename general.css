@@ -77,7 +77,6 @@ header {
     display: none;
     background-color: red; /* Fondo negro */
     opacity: .9;
-    width: 50%; /* Ancho del 50% de la pantalla */
     position: fixed; /* Fija la posición para que esté siempre visible */
     top: 0; /* Alinear en la parte superior */
     left: 0; /* Alinear a la izquierda */
@@ -311,7 +310,7 @@ ol {
     z-index: 2; /* Asegura que esté arriba de otros elementos */
 }
 /* Estilos para dispositivos móviles */
-@media (max-width: 414px) {
+@media (max-width: 460px) {
     body {
         max-width: 100%; /* Ancho completo en dispositivos móviles */
         margin: 0 auto;
@@ -347,11 +346,13 @@ ol {
     .nav.show-menu a {
         font-size: 20px;
     }
-    
+    .nav.show-menu {
+        width: 80%; /* Ancho del 80% de la pantalla */
+    }
 
 }
-/* Estilos para dispositivos móviles medianos (de 415px a 767px) */
-@media (min-width: 415px) and (max-width: 767px) {
+/* Estilos para dispositivos móviles medianos (de 461px a 767px) */
+@media (min-width: 461px) and (max-width: 767px) {
     body {
         max-width: 100%; /* Ancho completo en dispositivos móviles */
         margin: 0 auto;
@@ -387,7 +388,9 @@ ol {
     .nav.show-menu a {
         font-size: 20px;
     }
-    
+    .nav.show-menu {
+        width: 50%; /* Ancho del 50% de la pantalla */
+    }
 }
 
 /* Estilos para tabletas (de 768px a 1023px) */
@@ -423,6 +426,9 @@ ol {
     }
     .descripcion-producto >div{
         display: block;
+    }
+    .nav.show-menu {
+        width: 50%; /* Ancho del 50% de la pantalla */
     }
 }
 
