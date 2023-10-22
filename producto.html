@@ -15,8 +15,7 @@
 
     <!-- Metadatos para Open Graph (OG) - Facebook -->
     <meta property="og:title" content="Producto - PresupuestAR">
-    <meta property="og:description"
-        content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
+    <meta property="og:description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta property="og:type" content="website">
     <meta property="og:url" content="producto.html">
     <meta property="og:image" content="presupuestar-imageninicio.jpeg">
@@ -24,8 +23,7 @@
     <!-- Metadatos para Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Producto - PresupuestAR">
-    <meta name="twitter:description"
-        content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
+    <meta name="twitter:description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta name="twitter:image" content="presupuestar-imageninicio.jpeg">
     <meta name="twitter:site" content="@presupuestARteam10">
     <!-- Styles Sitio -->
@@ -33,6 +31,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+
 
 </head>
 
@@ -43,13 +43,23 @@
         <div class="bar"></div>
     </div>
     <nav class="nav">
-        <a class="agranda" href="index.html">INICIO</a>
-        <a class="agranda" href="nosotros.html">QUIENES SOMOS</a>
-        <a class="agranda activo" href="producto.html">PRODUCTO</a>
-        <a class="agranda" href="clientes.html">CLIENTES</a>
-        <a class="agranda" href="contacto.html">CONTACTO</a>
+        <a class="agranda" href="index.html" title="Index">INICIO</a>
+        <a class="agranda" href="nosotros.html" title="Quienes Somos">QUIENES SOMOS</a>
+        <a class="agranda activo" href="producto.html" title="Prodcuto">PRODUCTO</a>
+        <a class="agranda" href="clientes.html" title="Clientes">CLIENTES</a>
+        <a class="agranda" href="contacto.html" title="Contacto">CONTACTO</a>
     </nav>
-
+    <nav class="nav show-menu">
+        <div class="close-button"></div>
+        <img href="index.html" src="play-presupuestAR.png" alt="logo PresupuestAR">
+        <ul>
+            <li><a href="index.html" title="Index">INICIO</a></li>
+            <li><a href="nosotros.html" title="Quienes Somos">QUIENES SOMOS</a></li>
+            <li><a href="producto.html" title="Producto">PRODUCTO</a></li>
+            <li><a href="clientes.html" title="Clientes">CLIENTES</a></li>
+            <li><a href="contacto.html" title="Contacto">CONTACTO</a></li>
+        </ul>
+    </nav>
 
 
     <header>
@@ -65,7 +75,7 @@
     <div class="descripcion-producto">
         <div>
 
-            <img src="productos/presupuesto.jpg" alt="presupuestAR serivicio" height="300px" width="400">
+            <img src="productos/presupuesto.jpg" alt="presupuestAR serivicio" title="Elaboración de presupuesto" width="">
             <div>
                 <h3>Elaboración de presupuestos integrales para todas las etapas de producción.</h3><br>
                 <p>Nuestros profesionales tienen amplia experiencia en el armado de presupuestos integrales para las
@@ -74,12 +84,11 @@
                 <p>Cada presupuesto se adapta a las necesidades de la productora y se elabora a partir de reuniones de
                     trabajo con el equipo técnico a cargo del proyecto.</p><br>
                 <p>Siguiendo los lineamientos del guion, PresupuestAR optimiza los tiempos de rodaje ahorrando recursos
-                    sin
-                    resignar calidad.</p>
+                    sin resignar calidad.</p>
             </div>
         </div>
         <div>
-            <img src="productos/cine.jpg" alt="" height="300px" width="400">
+            <img src="productos/cine.jpg" alt="seguimiento gastos" title="Claqueta en monitor" width="">
             <div>
                 <h3>Seguimiento de los gastos en tiempo real</h3><br>
                 <p>Generamos calendarios de producción precisos, basados en los materiales y recursos humanos
@@ -95,9 +104,8 @@
                     para los miembros de la empresa como para los inversores.</p>
             </div>
         </div>
-
         <div>
-            <img src="productos/financiacion.jpeg" alt="" height="300px" width="400">
+            <img src="productos/financiacion.jpeg" alt="financiacion proyectos" title="Celuloide y dinero" width="">
             <div>
                 <h3>Gestión de financiación</h3><br>
                 <p>Te asesoramos en la gestión de financiamiento tanto público como privado.</p><br>
@@ -124,6 +132,10 @@
                         alt="Equipo 10 COM 23510"></a></p>
         </div>
     </footer>
+      <!-- Include your JavaScript file for the testimonial slider -->
+      <script src="testimonials.js"></script>
+      <!-- Include your JavaScript file for the hamburguer menu -->
+      <script src="hamburguer.js"></script>
 </body>
 
 </html>

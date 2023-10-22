@@ -244,17 +244,19 @@ ol {
 .descripcion-producto {
     display: block;
     align-items: center;
-}
+    }
 
 .descripcion-producto img {
     max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
     height: auto;
+    width: 40%;
 }
 
 .descripcion-producto >div{
     padding: 1%;
     text-align: justify;
     display: flex;
+    gap: 5%;
 }
 
 .agranda:hover
