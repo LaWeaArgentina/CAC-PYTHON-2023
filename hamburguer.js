@@ -33,8 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
         menuToggle.style.display = "block";
         navShowMenu.style.display = "none";
     }
-    // Elimina la clase .hidden para mostrar el menú
-    document.querySelector(".nav.show-menu").classList.remove("hidden");
-    }
-);
-
+});
