@@ -93,7 +93,7 @@ header {
     list-style: none; /* Elimina las viñetas */
     text-align: justify; /* Justificar el texto dentro del contenedor */
     padding: 1%; /* Elimina el espacio de relleno por defecto */
-    margin-top: 0 auto;
+    margin-top: 40px;
 }
 
 .nav.show-menu img {
@@ -122,10 +122,6 @@ header {
     text-decoration: none;
     font-size: 30px;
     text-shadow: 2px 2px 0 black;
-}
-
-/* Estilos para mostrar el menú desplegable cuando el botón de hamburguesa está activo en pantalla pequeña */
-.menu-toggle.active + .nav.show-menu {
 }
 
 /* Exclusivo Footer */
@@ -348,6 +344,10 @@ ol {
     .descripcion-producto >div{
         display: block;
     }
+    .nav.show-menu a {
+        font-size: 20px;
+    }
+    
 
 }
 /* Estilos para dispositivos móviles medianos (de 415px a 767px) */
@@ -383,6 +383,9 @@ ol {
     }
     .descripcion-producto >div{
         display: block;
+    }
+    .nav.show-menu a {
+        font-size: 20px;
     }
     
 }
