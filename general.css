@@ -288,17 +288,18 @@ ol {
 }
 
 @keyframes backgroundAnimation {
-    0%, 100% {
-        background-color: red; /* Estado inicial */
+
+    25%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: green;
     }
     75% {
         background-color: white; /* Cambia a blanco con opacidad .9 */
         opacity: .9;
     }
-    90% {
-        background-color: white; /* Cambia a blanco */
-    }
-    98% {
+    100% {
         background-color: red; /* Vuelve a rojo al final de la animación */
     }
 }
