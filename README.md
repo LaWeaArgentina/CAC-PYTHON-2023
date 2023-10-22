@@ -25,16 +25,17 @@ Documentación Preliminar del Proyecto - PresupuestAR
             - galería de logos de la gran cantidad de clientes que ya confiaron en nosotros.
     • Productos
             - informacion detallada de cada una de las herramientas.
-    • Contacto 
+    • Contacto
+            - formulario de contacto
+            - validación de email con javascript
 
 4. Diseño y Estilo: 
     • Estilo visual: Funcional, organizado y que transmite confianza. 
     • Colores: Negro, blanco y rojo. 
     • Tipografía: Noto Serif (google font - api) para transmitir claridad y seguridad. 
 5. Contenido y Funcionalidades: 
-    • Contenido: Textos e imágenes informativos. Detalle de los servicios ofrecidos, video promocional. 
-    • Funcionalidades: Formulario de contacto funcional. 
-
+    • Contenido: Textos e imágenes informativos. Branding, Marketing y Metadata para SEO y redes sociales. Testimonios de Clientes. Detalle de los servicios ofrecidos, video promocional. 
+    • Funcionalidades: Formulario de contacto funcional. Responsividad del navbar según resolución de pantalla con javascript. Testimonios cargados en slider con Javascript. Animaciones de Btn. CSS personalizado.
 
 6. Integrantes del Equipo y Representante: 
     • Analía Amallo: representante del equipo, diseño y desarrollo
@@ -43,9 +44,11 @@ Documentación Preliminar del Proyecto - PresupuestAR
     • Guillermo Bottega: desarrollo y contenido
     • Diego Allegue: desarrollo y contenido 
 
-7. Cronograma Tentativo: 
-    • Diseño y planificación: 2 semanas 
+7. Cronograma: 
+    • Diseño y planificación: 2 semanas
+        El proceso de diseño y planificación se llevó a cabo mediante diferentes reuniones virtuales por Google Meet donde se arribó a un concenso respecto del objetivo del proyecto, la estetica y distribución de las responsabilidades de cada miembro del equipo.
     • Creación de contenido: 3 semanas
+        
     • Desarrollo y programación: 3 semanas
 
 8. Recursos Externos: 
