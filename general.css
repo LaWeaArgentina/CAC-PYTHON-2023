@@ -275,7 +275,6 @@ ol {
   color: red;
 }
 
-/* Testimonial Slider - Estilo */
 .testimonial-slider {
     background-color: red;
     opacity: .9;
@@ -285,8 +284,24 @@ ol {
     font-style: italic;
     margin-top: 1%;
     margin-bottom: 1%;
+    animation: backgroundAnimation 7s ease-in-out infinite; /* Aplica la animación al color de fondo */
 }
 
+@keyframes backgroundAnimation {
+    0%, 100% {
+        background-color: red; /* Estado inicial */
+    }
+    75% {
+        background-color: white; /* Cambia a blanco con opacidad .9 */
+        opacity: .9;
+    }
+    90% {
+        background-color: white; /* Cambia a blanco */
+    }
+    98% {
+        background-color: red; /* Vuelve a rojo al final de la animación */
+    }
+}
 /* Estilo para el testimonio con comillas solo en el primer párrafo */
 .testimonial-slider p:first-child::before,
 .testimonial-slider p:first-child::after {
