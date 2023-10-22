@@ -34,3 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
         navShowMenu.style.display = "none";
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Elimina la clase .hidden para mostrar el menú
+    document.querySelector(".nav.show-menu").classList.remove("hidden");
+});

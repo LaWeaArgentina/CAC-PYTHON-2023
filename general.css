@@ -1,6 +1,10 @@
 
 
 /* General Body*/
+.hidden {
+    visibility: hidden;
+}
+
 body {
     color: white;
     font-family: 'Noto Serif', serif;
