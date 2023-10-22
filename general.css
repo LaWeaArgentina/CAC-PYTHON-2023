@@ -43,6 +43,7 @@ header {
 
 .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
+    transition: transform 0.6s ease; /* Aumenta la duración de la transformación */
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -51,6 +52,7 @@ header {
 
 .menu-toggle.active .bar:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+    transition: transform 0.6s ease; /* Aumenta la duración de la transformación */
 }
 
 /* Estilos para el menú de navegación en pantalla mas grandes de 840px */
