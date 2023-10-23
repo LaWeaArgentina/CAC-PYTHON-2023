@@ -47,17 +47,21 @@ Documentación Preliminar del Proyecto - PresupuestAR
 7. Cronograma: 
     • Diseño y planificación: 2 semanas
         El proceso de diseño y planificación se llevó a cabo mediante diferentes reuniones virtuales por Google Meet donde se arribó a un concenso respecto del objetivo del proyecto, la estetica y distribución de las responsabilidades de cada miembro del equipo.
-    • Creación de contenido: 3 semanas
-        
+    • Creación de contenido: 2 semanas
+        En forma asincronica y sincronica (meetings) fuimos trabajando en el contenido de la website y ajustes de plan y diseño.
     • Desarrollo y programación: 3 semanas
+        Trajando en forma asincronica y sincrónica ("coding session" por google meet) fuimos avanzando en la creación del github, la creación del HTML, styles con animaciones y javascript.
 
 8. Recursos Externos: 
-    • API de Testimonios de Clientes
-    • Imágenes y video sobre desarrollo de presupuestos audiovisuales
+    • API Fake Testimonials: Utilizaremos esta API para mostrar testimonios de clientes.
+    • iFrame - Youtube: Incorporaremos videos de YouTube para explicar nuestros servicios.
+    • API Google Fonts (Noto Serif): Utilizaremos esta fuente para una apariencia clara y segura.
 
 9. Desarrollos Futuros y Mejoras Potenciales 
     • Demo de la elaboración de presupuestos a partir de información solicitada al potencial cliente
     • Casos de éxito
+    • Automatización de Respuestas a Consultas
+    • Sitio Acceso Clientes
 
 10. Contacto: 
     • Email de la representante: analia.amallo@gmail.com 
