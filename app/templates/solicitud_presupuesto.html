@@ -1,0 +1,16 @@
+<!-- templates/solicitud_presupuesto.html -->
+
+{% extends "base.html" %}
+{% block content %}
+    <h2>Formulario de Solicitud de Presupuesto</h2>
+    <form method="post" action="">
+        {{ form.hidden_tag() }}
+        <div>{{ form.nombre.label }}</div>
+        <div>{{ form.nombre }}</div>
+        <div>{{ form.email.label }}</div>
+        <div>{{ form.email }}</div>
+        <div>{{ form.mensaje.label }}</div>
+        <div>{{ form.mensaje }}</div>
+        <div>{{ form.submit }}</div>
+    </form>
+{% endblock %}
