@@ -1,0 +1,226 @@
+@startuml
+
+!define ENTITY class
+!define PRIMARY_KEY_FIELD {field} : PK
+!define FOREIGN_KEY_FIELD {field} : FK
+!define END_ENTITY
+
+ENTITY Actores {
+    +idActor {field} : int <<generated>>
+    nombre {field} : string
+    edad {field} : int
+    sexo {field} : string
+    salario {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Vestuaristas {
+    +idVestuarista {field} : int <<generated>>
+    nombre {field} : string
+    especialidad {field} : string
+    salario {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Directores {
+    +idDirector {field} : int <<generated>>
+    nombre {field} : string
+    experiencia {field} : int
+    salario {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Locaciones {
+    +idLocacion {field} : int <<generated>>
+    nombre {field} : string
+    direccion {field} : string
+    costoAlquiler {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Maquilladores {
+    +idMaquillador {field} : int <<generated>>
+    nombre {field} : string
+    especialidad {field} : string
+    salario {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Utileria {
+    +idUtileria {field} : int <<generated>>
+    nombre {field} : string
+    descripcion {field} : text
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Camaras {
+    +idCamara {field} : int <<generated>>
+    modelo {field} : string
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Camarografos {
+    +idCamarografo {field} : int <<generated>>
+    nombre {field} : string
+    experiencia {field} : int
+    salario {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Ambientadores {
+    +idAmbientador {field} : int <<generated>>
+    nombre {field} : string
+    descripcion {field} : text
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Sonido {
+    +idSonido {field} : int <<generated>>
+    nombre {field} : string
+    descripcion {field} : text
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Iluminacion {
+    +idIluminacion {field} : int <<generated>>
+    nombre {field} : string
+    descripcion {field} : text
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Preproduccion {
+    +idPreproduccion {field} : int <<generated>>
+    nombre {field} : string
+    descripcion {field} : text
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Edicion {
+    +idEdicion {field} : int <<generated>>
+    nombre {field} : string
+    descripcion {field} : text
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Postproduccion {
+    +idPostproduccion {field} : int <<generated>>
+    nombre {field} : string
+    descripcion {field} : text
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Transporte {
+    +idTransporte {field} : int <<generated>>
+    vehiculo {field} : string
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Viaticos {
+    +idViatico {field} : int <<generated>>
+    destino {field} : string
+    costo {field} : decimal
+    idProyecto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Cliente {
+    +idCliente {field} : int <<generated>>
+    nombre {field} : string
+    direccion {field} : string
+    telefono {field} : string
+    email {field} : string
+    PRIMARY_KEY_FIELD
+} END_ENTITY
+
+ENTITY Presupuesto {
+    +idPresupuesto {field} : int <<generated>>
+    nombre {field} : string
+    fecha {field} : date
+    total {field} : decimal
+    idCliente {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Proyecto {
+    +idProyecto {field} : int <<generated>>
+    nombre {field} : string
+    descripcion {field} : text
+    fechaInicio {field} : date
+    fechaFin {field} : date
+    idPresupuesto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+ENTITY Item {
+    +idItem {field} : int <<generated>>
+    nombre {field} : string
+    costo {field} : decimal
+    idPresupuesto {field} : int <<FK>>
+    PRIMARY_KEY_FIELD
+    FOREIGN_KEY_FIELD
+} END_ENTITY
+
+Actores -- Proyecto : Participa_en
+Vestuaristas -- Proyecto : Participa_en
+Directores -- Proyecto : Participa_en
+Locaciones -- Proyecto : Ubicada_en
+Maquilladores -- Proyecto : Participa_en
+Utileria -- Proyecto : Utilizada_en
+Camaras -- Proyecto : Utilizadas_en
+Camarografos -- Proyecto : Participa_en
+Ambientadores -- Proyecto : Utilizados_en
+Sonido -- Proyecto : Requiere_sonido
+Iluminacion -- Proyecto : Requiere_iluminacion
+Preproduccion -- Proyecto : Necesaria_en
+Edicion -- Proyecto : Necesaria_en
+Postproduccion -- Proyecto : Necesaria_en
+Transporte -- Proyecto : Transporta_a
+Viaticos -- Proyecto : Incluye_viaticos
+
+Cliente "1" -- "0..*" Presupuesto : Tiene
+Presupuesto "1" -- "0..*" Proyecto : Contiene
+Presupuesto "1" -- "0..*" Item : Contiene
+
+@enduml
