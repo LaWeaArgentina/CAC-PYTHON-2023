@@ -1,5 +1,6 @@
-# config.py
+from os import environ
 
 class Config:
-    SECRET_KEY = 'tu_clave_secreta'  # Cambia esto por una clave secreta segura
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'  # Cambia esto según el motor de base de datos que estás utilizando
+    SECRET_KEY = ''  # Cambia esto por una clave secreta segura
+    SQLALCHEMY_DATABASE_URI = environ.get('DATABASE_URL') or 'mysql://root:@localhost/presupuestar'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
