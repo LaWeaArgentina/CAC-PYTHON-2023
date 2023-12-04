@@ -1,6 +1,0 @@
-from os import environ
-
-class Config:
-    SECRET_KEY = 'tu_clave_secreta'  # Cambia esto por una clave secreta segura
-    SQLALCHEMY_DATABASE_URI = environ.get('DATABASE_URL') or 'mysql://usuario:contraseña@localhost/nombre_de_la_base_de_datos'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
