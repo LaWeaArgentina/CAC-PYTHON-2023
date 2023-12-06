@@ -277,7 +277,16 @@ def dashboard():
 @app.route('/listado_clientes')
 @login_required
 def listado_clientes():
-    return render_template('listado-clientes.html')
+
+    cursor = db.database.cursor()
+    cursor.execute("SELECT * FROM Cliente")
+    resultado = cursor.fetchall()
+    insertObj = []
+    columnNames = [column[0] for column in cursor.description]
+    for record in resultado:
+        insertObj.append(dict(zip(columnNames, record)))
+    cursor.close
+    return render_template('listado-clientes.html', clientes=insertObj)
 
 if __name__ == '__main__':
     app.run(debug=True, port=4000)

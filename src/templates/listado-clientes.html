@@ -60,15 +60,13 @@
 
 
     <div class="container">
-        <table id="listado-clientes">
+        <table class="container">
             <thead>
                 <th scope="col">ID Cliente</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Dirección</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col">Email</th>
-                <th scope="col">Último Proyecto</th>
-                <th scope="col">Fecha Último Proyecto</th>
                 <!-- Agrega más encabezados según los campos de tu base de datos -->
             </thead>
             <tbody>
@@ -79,8 +77,6 @@
                     <td>{{ cliente.direccion }}</td>
                     <td>{{ cliente.telefono }}</td>
                     <td>{{ cliente.email }}</td>
-                    <td>{{ cliente.ultimo_proyecto_nombre }}</td>
-                    <td>{{ cliente.ultimo_proyecto_fecha }}</td>
                     <!-- Ajusta estos nombres de campos según tu modelo de datos -->
                 </tr>
                 {% endfor %}
@@ -88,8 +84,18 @@
         </table>
     </div>
 
-    </footer>
-      <!-- Include JavaScript file for the testimonial slider -->
+
+    <footer>
+        <hr>
+        <div class="icono-container">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <p class="creditos-sitio">Desarrollado por <a href="#"><img src="{{ url_for('static', filename='images/equipo-10-python-50px.png') }}"
+                        alt="Equipo 10 COM 23510"></a></p>
+        </div>
+
+    </footer>      <!-- Include JavaScript file for the testimonial slider -->
       <script src="{{ url_for('static', filename='js/testimonials.js') }}"></script>
       <!-- Include JavaScript file for the hamburguer menu -->
       <script src="{{ url_for('static', filename='js/hamburguer.js') }}"></script>
