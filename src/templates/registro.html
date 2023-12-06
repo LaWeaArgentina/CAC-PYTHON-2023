@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Metadatos para SEO -->
-    <title>PresupuestAR - Sistema de Gestión de Presupuesto Audiovisual</title> 
+    <title>Quienes Somos</title> 
     <meta name="description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta name="keywords" content="Gestión de presupuestos audiovisuales, elaboración de presupuestos
     Planificación de producción, Control de gastos de produccion cine, producción filmica, Subsidios INCAA, Cotización video, presupuesto pelicula, presupuesto casting, presupuesto set filmación, Producción audiovisual">
     <meta name="author" content="PresupuestAR Equipo 10 CODOaCODO">
     
     <!-- Metadatos para Open Graph (OG) - Facebook -->
-    <meta property="og:title" content="PresupuestAR - Sistema de Gestión de Presupuesto Audiovisual">
+    <meta property="og:title" content="Quienes Somos PresupuestAR">
     <meta property="og:description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="inicio">
+    <meta property="og:url" content="nosotros">
     <meta property="og:image" content="presupuestar-imageninicio.jpeg">
     
     <!-- Metadatos para Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PresupuestAR - Sistema de Gestión de Presupuesto Audiovisual">
+    <meta name="twitter:title" content="Quienes Somos PresupuestAR">
     <meta name="twitter:description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta name="twitter:image" content="presupuestar-imageninicio.jpeg">
     <meta name="twitter:site" content="@presupuestARteam10">
@@ -31,17 +31,17 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 
+    
 </head>
 
 <body>
-    <!-- Navbar -->
     <div class="menu-toggle hidden">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
     <nav class="nav">
-        <a class="agranda activo" href="inicio" title="inicio">INICIO</a>
+        <a class="agranda" href="inicio" title="inicio">INICIO</a>
         <a class="agranda" href="nosotros" title="Quienes Somos">QUIENES SOMOS</a>
         <a class="agranda" href="producto" title="Producto">PRODUCTO</a>
         <a class="agranda" href="clientes" title="Clientes">CLIENTES</a>
@@ -61,63 +61,33 @@
 
 
     <header>
-        <div>
-            <a class="btn" href="login" title="Login">LOGIN</a>
-            <a class="btn" href="registro" title="Login">REGISTRO</a>
-
-        </div>
             <h1>Presupuest<b class="ar">AR</b></h1>
         <h3>Gestión de presupuestos audiovisuales</h3>
     </header>
 
-    <!-- Testimonial Slider Container -->
-    <div class="testimonial-slider">
-        <div class="testimonial">
-            <p id="testimonial-text">Cargando Testimonios...</p>
-            <p id="testimonial-author"></p>
-        </div>
-    </div>
-    <!-- Contenedor para el video de YouTube -->
-    <div class="video-container">
-        <!-- Imagen PNG -->
-        <img href="" class="overlay-image" src="{{ url_for('static', filename='images/play-presupuestAR.png') }}" alt="logo PresupuestAR">
-        <iframe
-            class="centered-video"
-            width="600"
-            height="315"
-            src="https://www.youtube.com/embed/_NK8TPdY4_s?autoplay=1&controls=1&showinfo=0&autohide=&loop=1&mute=1"
-            title="PRESUPUESTAR RODAJE"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
-    </div>
-
     <div class="container">
-            <p>Presupuest<b class="ar">AR</b> es la solución que tu equipo de producción audiovisual necesita para simplificar la gestión
-                    de presupuestos. Con nuestras herramientas avanzadas, podrás:
-        </p>
-
-        <ol>
-            <li>Crear presupuestos detallados de forma eficiente.</li>
-            <li>Llevar un seguimiento de los gastos en tiempo real.</li>
-            <li>Planificar recursos humanos y materiales de manera efectiva.</li>
-            <li>Generar calendarios de producción precisos.</li>
-        </ol>
-        <p>Presupuest<b class="ar">AR</b> es la elección ideal para productoras, estudios y profesionales del mundo audiovisual que desean optimizar sus procesos y maximizar su eficiencia.</p>
-            <br>
-        <p>Precio: Contáctanos para obtener una cotización personalizada.</p>
-        <button class="btn" type="button"><a style="text-decoration: none; color: white;" href="/contacto">SOLICITAR DEMO</a></button>
-    </div>
+        <form action="/registro" method="POST">
+            <h2>Registro</h2>
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %}
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Registrarse">
+        </form>
 
     <footer>
-            <hr>
+        <hr>
         <div class="icono-container">
-                    <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-twitter"></a>
             <a href="#" class="fa fa-instagram"></a>
             <p class="creditos-sitio">Desarrollado por <a href="#"><img src="{{ url_for('static', filename='images/equipo-10-python-50px.png') }}"
-                alt="Equipo 10 COM 23510"></a></p>
-                    </div>
+                        alt="Equipo 10 COM 23510"></a></p>
+        </div>
+
     </footer>
       <!-- Include JavaScript file for the testimonial slider -->
       <script src="{{ url_for('static', filename='js/testimonials.js') }}"></script>
