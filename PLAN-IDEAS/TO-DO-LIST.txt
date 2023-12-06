@@ -1,5 +1,0 @@
-# arreglar formulario solicitud presuouesto
-# crear formulario que traiga datos de solicitud y formulario para presupuestar 
-# crear formulario para consultar Presupuesto
-# crear formulario para modificar Presupuesto
-# crear formulario para eliminar preupuesto
