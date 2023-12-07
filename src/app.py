@@ -139,11 +139,6 @@ def presupuestoSave():
         insertObj.append(dict(zip(columnNames, record)))
     idProyecto = insertObj[0]
     idProyecto = idProyecto['AUTO_INCREMENT']
-    print("HOLAAAAAAAAAAAAAAAAAAAAAA")
-    print(idProyecto)
-
-
-
 
     # Cliente
     nombre_cliente = request.form.get('nombre_cliente')
