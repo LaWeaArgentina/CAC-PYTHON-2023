@@ -1,7 +1,6 @@
 import mysql.connector
 
 database = mysql.connector.connect(
-    user='root',
-    password='',
-    database='presupuestar'
-)
+    user = 'root',
+    password = '1',
+    database = 'presupuestar'
