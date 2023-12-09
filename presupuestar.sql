@@ -8,6 +8,7 @@ CREATE TABLE `contactos` (
   `email` VARCHAR(40) NOT NULL,
   `mensaje` TEXT NOT NULL,
   `respondido` INT DEFAULT NULL,
+  `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

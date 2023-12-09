@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Metadatos para SEO -->
-    <title>Quienes Somos</title> 
+    <title>Mensajes Recibidos</title> 
     <meta name="description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta name="keywords" content="Gestión de presupuestos audiovisuales, elaboración de presupuestos
     Planificación de producción, Control de gastos de produccion cine, producción filmica, Subsidios INCAA, Cotización video, presupuesto pelicula, presupuesto casting, presupuesto set filmación, Producción audiovisual">
     <meta name="author" content="PresupuestAR Equipo 10 CODOaCODO">
     
     <!-- Metadatos para Open Graph (OG) - Facebook -->
-    <meta property="og:title" content="Quienes Somos PresupuestAR">
+    <meta property="og:title" content="Mensajes Recibidos">
     <meta property="og:description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta property="og:type" content="website">
     <meta property="og:url" content="nosotros">
@@ -20,7 +20,7 @@
     
     <!-- Metadatos para Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Quienes Somos PresupuestAR">
+    <meta name="twitter:title" content="Mensajes Recibidos">
     <meta name="twitter:description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta name="twitter:image" content="presupuestar-imageninicio.jpeg">
     <meta name="twitter:site" content="@presupuestARteam10">
@@ -68,6 +68,7 @@
     <div class="container">
         <table class="container">
             <thead>
+                <th scope="col">FECHA</th>
                 <th scope="col">NOMBRE</th>
                 <th scope="col">EMAIL</th>
                 <th scope="col">MENSAJE</th>
@@ -77,6 +78,7 @@
             <tbody>
                 {% for d in data %}
                 <tr>
+                    <td>{{d.created_at}}</td>
                     <td>{{d.nombre}}</td>
                     <td>{{d.email}}</td>
                     <td>{{d.mensaje}}</td>
