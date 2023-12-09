@@ -241,6 +241,9 @@ def presupuestoSave():
 @login_required
 def registro():
     if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
         cursor = db.database.cursor()
         sql = "INSERT INTO users (username, password) VALUES (%s, %s)"
         data = (username, password)
