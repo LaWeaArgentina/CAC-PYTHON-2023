@@ -46,22 +46,21 @@
         <div class="bar"></div>
     </div>
     <nav class="nav">
-        <a class="agranda" href="inicio" title="inicio">INICIO</a>
-        <a class="agranda" href="nosotros" title="Quienes Somos">QUIENES SOMOS</a>
-        <a class="agranda" href="producto" title="Producto">PRODUCTO</a>
-        <a class="agranda" href="clientes" title="Clientes">CLIENTES</a>
-        <a class="agranda" href="contacto" title="Contacto">CONTACTO</a>
+        <a class="agranda" href="/dashboard" title="Panel Adiminstración">ADMINISTRACION</a>
+        <a class="agranda" href="/listado-presupuestos" title="Presupuestos">PRESUPUESTOS</a>
+        <a class="agranda" href="/listado-clientes" title="Clientes">CLIENTES</a>
+        <a class="agranda" href="/listado-proyectos" title="Proyectos">PROYECTOS</a>
+        <a class="agranda" href="/logout" title="Salir">SALIR</a>
     </nav>
+
     <nav class="nav show-menu hidden">
         <div class="close-button"></div>
-        <img href="inicio" src="{{ url_for('static', filename='images/play-presupuestAR.png') }}"
-            alt="logo PresupuestAR">
+        <img src="{{ url_for('static', filename='images/play-presupuestAR.png') }}" alt="logo PresupuestAR">
         <ul>
-            <li><a href="inicio" title="inicio">INICIO</a></li>
-            <li><a href="nosotros" title="Quienes Somos">QUIENES SOMOS</a></li>
-            <li><a href="producto" title="Producto">PRODUCTO</a></li>
-            <li><a href="clientes" title="Clientes">CLIENTES</a></li>
-            <li><a href="contacto" title="Contacto">CONTACTO</a></li>
+            <li><a href="/listado-presupuestos" title="Presupuestos">PRESUPUESTOS</a></li>
+            <li><a href="/listado-clientes" title="Clientes">CLIENTES</a></li>
+            <li><a href="/listado-proyectos" title="Proyectos">PROYECTOS</a></li>
+            <li><a href="/logout" title="Salir">SALIR</a></li>
         </ul>
     </nav>
 

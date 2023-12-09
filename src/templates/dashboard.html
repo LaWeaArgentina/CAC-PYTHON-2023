@@ -41,9 +41,9 @@
         <div class="bar"></div>
     </div>
     <nav class="nav">
+        <a class="agranda" href="/dashboard" title="Panel Adiminstración">ADMINISTRACION</a>
         <a class="agranda" href="/listado-presupuestos" title="Presupuestos">PRESUPUESTOS</a>
-        <a class="agranda" href="/listado_clientes" title="Clientes">CLIENTES</a>
-        <a class="agranda" href="/contactos" title="Contactos">CONTACTOS</a>
+        <a class="agranda" href="/listado-clientes" title="Clientes">CLIENTES</a>
         <a class="agranda" href="/listado-proyectos" title="Proyectos">PROYECTOS</a>
         <a class="agranda" href="/logout" title="Salir">SALIR</a>
     </nav>
@@ -53,25 +53,34 @@
         <img src="{{ url_for('static', filename='images/play-presupuestAR.png') }}" alt="logo PresupuestAR">
         <ul>
             <li><a href="/listado-presupuestos" title="Presupuestos">PRESUPUESTOS</a></li>
-            <li><a href="/listado_clientes" title="Clientes">CLIENTES</a></li>
-            <li><a href="/contactos" title="Clientes">CONTACTOS</a></li>
+            <li><a href="/listado-clientes" title="Clientes">CLIENTES</a></li>
             <li><a href="/listado-proyectos" title="Proyectos">PROYECTOS</a></li>
             <li><a href="/logout" title="Salir">SALIR</a></li>
         </ul>
     </nav>
 
-
     <header>
             <h1>Presupuest<b class="ar">AR</b></h1>
-        <h3>Gestión de presupuestos audiovisuales</h3>
+        <h3>Bienvenido al Panel de Administracion</h3>
     </header>
-
-    <div class="container">
-        <a class="btn" href="/listado-presupuestos">Ir a Presupuestos</a>
-        <a class="btn" href="/listado_clientes">Ir a Clientes</a>
-        <a class="btn" href="/contactos">Ir a Contactos</a>
-        <a class="btn" href="/listado-proyectos">Ir a Proyectos</a>
-        <a class="btn" href="/logout">Salir</a>
+    <div class="container-dashboard">
+        <hr>
+    </div>
+    <div class="container-dashboard">
+        <a class="btn" href="/contactos">Consultas Recibidas</a>
+        <a class="btn" href="/crear-presupuesto">Nuevo Presupuesto</a>
+    </div>
+    <div class="container-dashboard">
+        <a class="btn" href="/listado-presupuestos">Presupuestos</a>
+        <a class="btn" href="/listado-clientes">Clientes</a>
+        <a class="btn" href="/listado-proyectos">Proyectos</a>
+    </div>
+    <div class="container-dashboard">
+        <hr>
+    </div>
+    <div class="container-dashboard">
+        <a class="btn" href="/registro">Crear Usuario</a>
+        <a class="btn" href="/logout">Cerrar Sesión</a>
     </div>
 
     <footer>

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Metadatos para SEO -->
-    <title>Lista de Clientes</title> 
+    <title>Lista de Presupuestos</title> 
     <meta name="description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta name="keywords" content="Gestión de presupuestos audiovisuales, elaboración de presupuestos
     Planificación de producción, Control de gastos de produccion cine, producción filmica, Subsidios INCAA, Cotización video, presupuesto pelicula, presupuesto casting, presupuesto set filmación, Producción audiovisual">
     <meta name="author" content="PresupuestAR Equipo 10 CODOaCODO">
     
     <!-- Metadatos para Open Graph (OG) - Facebook -->
-    <meta property="og:title" content="Listado de Clientes">
+    <meta property="og:title" content="Listado de Presupuestos">
     <meta property="og:description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta property="og:type" content="website">
     <meta property="og:url" content="nosotros">
@@ -20,7 +20,7 @@
     
     <!-- Metadatos para Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Listado de Clientes">
+    <meta name="twitter:title" content="Listado de Presupuestos">
     <meta name="twitter:description" content="Soluciones integrales para que tu equipo de producción audiovisual solo se ocupe de una cosa: CREAR">
     <meta name="twitter:image" content="presupuestar-imageninicio.jpeg">
     <meta name="twitter:site" content="@presupuestARteam10">
@@ -61,28 +61,26 @@
 
     <header>
         <h1>Presupuest<b class="ar">AR</b></h1>
-        <h3>Listado de Clientes</h3>
+        <h3>Listado de Presupuestos</h3>
     </header>
 
-    <div class="container-dashbpard">
-        <table class="container">
+    <div class="container-dashboard">
+        <table class="container-dashboard">
             <thead>
-                <th scope="col">ID Cliente</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Dirección</th>
-                <th scope="col">Teléfono</th>
-                <th scope="col">Email</th>
-                <!-- Agrega más encabezados según los campos de tu base de datos -->
+                <th scope="col">ID Presupuesto</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Proyecto</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Total</th>
             </thead>
             <tbody>
-                {% for cliente in clientes %}
+                {% for presupuesto in presupuestos %}
                 <tr>
-                    <td>{{ cliente.idCliente }}</td>
-                    <td>{{ cliente.nombre }}</td>
-                    <td>{{ cliente.direccion }}</td>
-                    <td>{{ cliente.telefono }}</td>
-                    <td>{{ cliente.email }}</td>
-                    <!-- Ajusta estos nombres de campos según tu modelo de datos -->
+                    <td>{{ presupuesto.idPresupuesto }}</td>
+                    <td>{{ presupuesto.nombreCliente }}</td>
+                    <td>{{ presupuesto.nombreProyecto }}</td> <!-- Change here -->
+                    <td>{{ presupuesto.fecha }}</td>
+                    <td>{{ presupuesto.total }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
