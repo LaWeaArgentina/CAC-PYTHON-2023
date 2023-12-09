@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import database as db
 import os
@@ -56,59 +56,87 @@ def producto():
 
 @app.route('/contacto')
 def contacto():
-        
     return render_template('contacto.html')
-
-
-@app.route('/contactos')
-def contactos():
-    cursor = db.database.cursor()
-    cursor.execute("SELECT * FROM contactos")
-    resultado = cursor.fetchall()
-    insertObj = []
-    columnNames = [column[0] for column in cursor.description]
-    for record in resultado:
-        insertObj.append(dict(zip(columnNames, record)))
-    cursor.close
-    return render_template('contactos.html', data=insertObj)
 
 @app.route('/contacto_save', methods=['POST'])
 def contactoSave():
-    nombre = request.form['nombre']
-    email = request.form['email']
-    mensaje = request.form['mensaje']
-    if nombre and email and mensaje:
+    try:
+        nombre = request.form['nombre']
+        email = request.form['email']
+        mensaje = request.form['mensaje']
+
+        # Validar datos del formulario
+        if not (nombre and email and mensaje):
+            flash('Completa todos los campos del formulario', 'error')
+            return redirect(url_for('contacto'))
+
+        # Insertar en la base de datos
         cursor = db.database.cursor()
         sql = "INSERT INTO contactos (nombre, email, mensaje) VALUES (%s, %s, %s)"
         data = (nombre, email, mensaje)
         cursor.execute(sql, data)
         db.database.commit()
+
+        flash('Mensaje enviado correctamente', 'success')
+    except Exception as e:
+        flash(f'Error al enviar el mensaje: {e}', 'error')
+    finally:
+        cursor.close()
+
     return redirect(url_for('inicio'))
+
+@app.route('/contactos')
+@login_required
+def contactos():
+    try:
+        cursor = db.database.cursor()
+        cursor.execute("SELECT * FROM contactos")
+        resultado = cursor.fetchall()
+        insertObj = [dict(zip([column[0] for column in cursor.description], record)) for record in resultado]
+        cursor.close()
+        return render_template('contactos.html', data=insertObj)
+    except Exception as e:
+        flash(f'Error fetching contact entries: {e}', 'error')
+        return redirect(url_for('inicio'))
 
 @app.route('/contacto_edit', methods=['POST'])
 def contactoEdit():
-    respondido = request.form['respondido']
-    id = request.form['id']
+    try:
+        respondido = request.form['respondido']
+        id = request.form['id']
 
-    if respondido and id:
-        cursor = db.database.cursor()
-        sql = "UPDATE contactos SET respondido = %s WHERE id = %s"
-        data = (respondido, id)
-        cursor.execute(sql, data)
-        db.database.commit()
-    return redirect(url_for('contactos'))
+        if respondido and id:
+            cursor = db.database.cursor()
+            sql = "UPDATE contactos SET respondido = %s WHERE id = %s"
+            data = (respondido, id)
+            cursor.execute(sql, data)
+            db.database.commit()
+        else:
+            flash('Invalid data for updating contact entry', 'error')
+
+        return redirect(url_for('contactos'))
+    except Exception as e:
+        flash(f'Error updating contact entry: {e}', 'error')
+        return redirect(url_for('contactos'))
 
 @app.route('/contacto_delete', methods=['POST'])
 def contactoDelete():
-    id = request.form['id']
+    try:
+        id = request.form['id']
 
-    if id:
-        cursor = db.database.cursor()
-        sql = "DELETE FROM contactos WHERE id = %s"
-        data = [id]
-        cursor.execute(sql, data)
-        db.database.commit()
-    return redirect(url_for('contactos'))
+        if id:
+            cursor = db.database.cursor()
+            sql = "DELETE FROM contactos WHERE id = %s"
+            data = [id]
+            cursor.execute(sql, data)
+            db.database.commit()
+        else:
+            flash('Invalid data for deleting contact entry', 'error')
+
+        return redirect(url_for('contactos'))
+    except Exception as e:
+        flash(f'Error deleting contact entry: {e}', 'error')
+        return redirect(url_for('contactos'))
 
 @app.route('/crear-presupuesto')
 def crear_presupuesto():
@@ -207,23 +235,22 @@ def presupuestoSave():
     return redirect(url_for('inicio'))
 
 @app.route('/registro', methods=['GET', 'POST'])
+@login_required
 def registro():
     if request.method == 'POST':
-        # Retrieve form data
-        username = request.form['username']
-        password = request.form['password']
-
-        # Validate data
-        if not username or not password:
-            return render_template('registro.html', error='Debes completar todos los campos.')
-
-        # Create user using SQL
         cursor = db.database.cursor()
         sql = "INSERT INTO users (username, password) VALUES (%s, %s)"
         data = (username, password)
-        cursor.execute(sql, data)
 
-        db.database.commit()
+        try:
+            cursor.execute(sql, data)
+            db.database.commit()
+            flash('Registro exitoso', 'success')  # Mensaje de éxito
+            return redirect('/dashboard')  # Con registro exitoso vuelve a '/dashboard'
+        except Exception as e:
+            print(f"Error al registrar usuario: {e}")
+            db.database.rollback()
+            flash('Error en el registro. Inténtalo nuevamente.', 'error')  # Mensaje de error
 
     # If it's a GET request, simply display the form
     return render_template('registro.html')
@@ -269,7 +296,7 @@ def logout():
 def dashboard():
     return render_template('dashboard.html')
 
-@app.route('/listado_clientes')
+@app.route('/listado-clientes')
 @login_required
 def listado_clientes():
 
@@ -282,6 +309,40 @@ def listado_clientes():
         insertObj.append(dict(zip(columnNames, record)))
     cursor.close
     return render_template('listado-clientes.html', clientes=insertObj)
+
+@app.route('/listado-proyectos')
+@login_required
+def listado_proyectos():
+    try:
+        cursor = db.database.cursor(dictionary=True)
+        cursor.execute("SELECT * FROM Proyecto")
+        proyectos = cursor.fetchall()
+        cursor.close()
+        print(proyectos)  # Agrega este print para ver los proyectos en la consola
+
+        return render_template('listado-proyectos.html', proyectos=proyectos)
+    except Exception as e:
+        print(f"Error: {e}")
+        return "Error al recuperar los proyectos de la base de datos."
+
+@app.route('/listado-presupuestos')
+@login_required
+def listado_presupuestos():
+    # Obtener datos de la base de datos
+    cursor = db.database.cursor(dictionary=True)
+    sql = """
+    SELECT P.idPresupuesto, Pr.nombre AS nombreProyecto, P.fecha, P.total, C.nombre AS nombreCliente
+    FROM Presupuesto P
+    INNER JOIN Cliente C ON P.idCliente = C.idCliente
+    INNER JOIN Proyecto Pr ON P.idProyecto = Pr.idProyecto
+    """
+    cursor.execute(sql)
+    presupuestos = cursor.fetchall()
+    cursor.close()
+
+    # Renderizar la plantilla con los datos obtenidos
+    return render_template('listado-presupuestos.html', presupuestos=presupuestos)
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=4000)
