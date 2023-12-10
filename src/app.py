@@ -3,8 +3,9 @@
 
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-from database import check_database_connection, reload_flask_app
+from database import create_database_connection, handle_sighup
 import os
+import signal
 
 # Importa el módulo database y usar el alias db
 import database as db
