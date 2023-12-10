@@ -3,8 +3,11 @@
 
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-import database as db
+from database import check_database_connection, reload_flask_app
 import os
+
+# Importa el módulo database y usar el alias db
+import database as db
 
 directorio = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 directorio = os.path.join(directorio, 'src', 'templates')
@@ -243,7 +246,7 @@ def registro():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        
+
         cursor = db.database.cursor()
         sql = "INSERT INTO users (username, password) VALUES (%s, %s)"
         data = (username, password)
