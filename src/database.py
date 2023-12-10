@@ -2,6 +2,7 @@ import mysql.connector
 from dotenv import load_dotenv
 import os
 import time
+import signal
 
 # Carga las variables de entorno de un archivo .env
 load_dotenv()
