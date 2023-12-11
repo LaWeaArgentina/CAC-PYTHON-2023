@@ -35,14 +35,6 @@ def load_user(user_id):
         user.id = user_data['id']
         return user
 
-@app.route('/recargar-database')
-def recargar_database():
-    # Ejecutar el script reload_database.py
-    from reload_database import reload_database
-    reload_database()
-
-    return "Base de datos recargada exitosamente."
-
 @app.route('/')
 def home():
 
