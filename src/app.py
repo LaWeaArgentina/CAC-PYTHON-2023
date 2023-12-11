@@ -3,7 +3,7 @@
 
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-from database import create_database_connection, handle_sighup
+from database import create_database_connection, handle_sighup, check_database_connection, reload_flask_app
 import os
 import signal
 
@@ -35,6 +35,13 @@ def load_user(user_id):
         user.id = user_data['id']
         return user
 
+@app.route('/recargar-database')
+def recargar_database():
+    # Ejecutar el script reload_database.py
+    from reload_database import reload_database
+    reload_database()
+
+    return "Base de datos recargada exitosamente."
 
 @app.route('/')
 def home():
